@@ -1,6 +1,4 @@
 carrito = [];
-modal = null;
-createModal();
 
 const URL =   "https://gist.githubusercontent.com/josejbocanegra/9a28c356416badb8f9173daf36d1460b/raw/5ea84b9d43ff494fcbf5c5186544a18b42812f09/restaurant.json";
 
@@ -10,6 +8,7 @@ const t = (callback) => {
     const a = element.json();
     a.then((r) => {
       callback(r);
+      console.a
     });
   });
 };
@@ -28,13 +27,13 @@ function quitarElementos() {
 }
 
 
-
+//Interacción
 let burguers = document.getElementById("burguers");
 burguers.onclick = () => {
     quitarElementos();
   t((datos) => {
     comida = datos[0].products;
-    ponerProductos(comida, "Burgers");
+    agregar(comida, "Burgers");
   });
 };
 
@@ -43,7 +42,7 @@ tacos.onclick = () => {
     quitarElementos();
   t((datos) => {
     comida = datos[1].products;
-    ponerProductos(comida, "Tacos");
+    agregar(comida, "Tacos");
   });
 };
 
@@ -52,7 +51,7 @@ salads.onclick = () => {
     quitarElementos();
   t((datos) => {
     comida = datos[2].products;
-    ponerProductos(comida, "Salads");
+    agregar(comida, "Salads");
   });
 };
 
@@ -61,7 +60,7 @@ desserts.onclick = () => {
     quitarElementos();
   t((datos) => {
     comida = datos[3].products;
-    ponerProductos(comida, "Desserts");
+    agregar(comida, "Desserts");
   });
 };
 
@@ -70,12 +69,8 @@ drinks.onclick = () => {
     quitarElementos();
   t((datos) => {
     comida = datos[4].products;
-    ponerProductos(comida, "Drinks & Slides");
+    agregar(comida, "Drinks & Slides");
   });
 };
 
 
-function getNumeroItems(inner) {
-  let items = document.getElementById("numeroCarrito");
-  items.innerHTML = inner;
-}

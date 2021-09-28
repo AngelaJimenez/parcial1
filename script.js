@@ -16,16 +16,15 @@ const t = (callback) => {
 
 //VACIAR HTML
 function quitarElementos() {
-  var node = document.getElementById("cartasProductos");
+  var node = document.getElementById("productos");
   while (node.firstChild) {
     node.removeChild(node.firstChild);
   }
-  var node = document.getElementById("tituloProducto");
+  var node = document.getElementById("titulotipoProducto");
   while (node.firstChild) {
     node.removeChild(node.firstChild);
   }
 }
-
 
 //Interacción
 let burguers = document.getElementById("burguers");
@@ -74,3 +73,18 @@ drinks.onclick = () => {
 };
 
 
+//PRODUCTOS
+function agregar(comida, titulo) {
+    let divProductos = document.getElementById("productos");
+    let divNombre = document.getElementById("titulotipoProducto");
+    let nom = document.createElement("h1");
+    nom.innerText = titulo;
+    nom.className = "text-center";
+    divNombre.appendChild(nom);
+  
+    //Productos ordenados
+    let divContainerRow = document.createElement("div");
+    divContainerRow.className = "row";
+  
+  
+  }

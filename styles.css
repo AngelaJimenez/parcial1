@@ -13,6 +13,10 @@
   width: 100%;
   height: 5em;
 }
+.cardpic{
+  max-height: 250px;
+  max-width: 250px;
+}
 .menutext {
   color: whitesmoke;
 }

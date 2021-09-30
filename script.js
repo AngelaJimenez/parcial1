@@ -14,7 +14,6 @@ const t = (callback) => {
 };
 
 
-//VACIAR HTML
 function quitarElementos() {
   var node = document.getElementById("productos");
   while (node.firstChild) {
@@ -29,7 +28,8 @@ t((datos) => {
     comida = datos[0].products;
     agregar(comida, "Burgers");
   });
-//Interacción
+
+  
 let burguers = document.getElementById("burguers");
 burguers.onclick = () => {
     quitarElementos();
@@ -74,6 +74,8 @@ drinks.onclick = () => {
     agregar(comida, "Drinks & Slides");
   });
 };
+
+
 
 let carritopic = document.getElementById("carritoFoto");
 carritopic.onclick = () => {
@@ -223,11 +225,10 @@ function creartablacarrito(){
     botonconfirm.className = "btn btn-success";
     botonconfirm.innerText = "Confirm Order";
     
-
-    botoncancel.onclick = () => {
-      openmodal();
-    };
-
+    botoncancel.setAttribute("data-toggle","modal")
+    botoncancel.setAttribute("data-target","#exampleModal")
+    
+    
     botonconfirm.onclick = () => {
       console.log(confirmation)
       carrito=[];
@@ -321,3 +322,18 @@ function agregar(comida, titulo) {
       let item = document.getElementById("numeroProductosCarro");
       item.innerHTML = texto;
   }
+
+
+  let cancelorder = document.getElementById("cancelorder");
+cancelorder.onclick = () => {
+  carrito=[];
+  confirmation=[];
+  creartablacarrito();
+  getNumeroItems(carrito.length + " Items");
+};
+
+let acceptorder = document.getElementById("acceptorder");
+acceptorder.onclick = () => {
+
+};
+

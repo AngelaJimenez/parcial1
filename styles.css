@@ -25,3 +25,36 @@
 .menutext {
   color: whitesmoke;
 }
+.header1{
+	height:60px;
+}
+
+.header1 h1{
+	margin: 0 0 0 0;
+	line-height:40px;
+	padding: 10px 0px; 
+}
+
+.header1 div{
+	margin: 0 0 0 0;
+	height:60px;
+	padding: 0px 0px; 
+}
+
+.header1 img{
+	margin: 0 0 0 0;
+	height:60px;
+	padding: 0px 0px; 
+}
+
+.header1 p{
+	margin:  0 10px;
+	line-height:40px;
+	padding: 10px 0px; 
+}
+
+.banner1{
+	background: url(imagenes/banner.png) no-repeat center center;
+	background-size:cover;
+	height: 450px;
+}

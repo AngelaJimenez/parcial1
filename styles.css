@@ -3,10 +3,16 @@
 .titleformat {
   font-family: 'Satisfy', cursive;
 }
-
+.banner {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width:100%;
+}
 
 .textCenter {
   text-align: center; /* Align text to the center */
+  align-items: center;
 }
 .menu{
   background-color: rgb(29, 29, 29);
@@ -14,8 +20,7 @@
   height: 5em;
 }
 .cardpic{
-  max-height: 250px;
-  max-width: 250px;
+  width: 100%;
 }
 .menutext {
   color: whitesmoke;
